@@ -1,0 +1,16 @@
+.mainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.container{
+  max-width: 600px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.btn {
+margin-top: 10px;
+margin-bottom: 10px;
+}
