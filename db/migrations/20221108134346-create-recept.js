@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       time: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       instruction: {
         type: Sequelize.TEXT

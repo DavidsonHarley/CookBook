@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Recept.init({
     title: DataTypes.STRING,
-    time: DataTypes.STRING,
+    time: DataTypes.INTEGER,
     instruction: DataTypes.TEXT,
     img: DataTypes.STRING
   }, {

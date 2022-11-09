@@ -2,7 +2,6 @@ const cardContainer = document.querySelector('.containerCards');
 console.log(cardContainer);
 
 cardContainer?.addEventListener('click', async (e) => {
-  e.preventDefault();
   try {
     if(e.target.tagName === 'BUTTON' && e.target.innerHTML === 'В избранное') {
       const { id:receptID } = e.target
