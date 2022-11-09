@@ -9,28 +9,23 @@ module.exports = function Home({ newUser, receptHome}) {
       Hello user!
       {' '}
       { newUser }
-      
+
         <div className='mainImg'>
           <img className='img' src="img/1539535829172342793.jpg" alt="edaMain" />
         </div>
         <div className='containerCards'>
-        {receptHome &&  receptHome.map(({title, img, Compounds}) => 
+
+        {receptHome &&  receptHome.map((el) => 
           <>
           <div className='containerRecept'>
          <div className="card" style={{width: '18rem'}}>
-            <div>
-              <a className='app' href="/">🖤</a> 
-              </div>
-              <a href="/">
-              <img src={img} class="card-img-top" alt="img"/>
-              </a>
+            <img src={el.img} className="card-img-top" alt="img"/>
             <div className="card-body">
-              <h5 className="card-title">{title}</h5>
-              <div >
-              <p className="card-text">
-                Количество ингредиентов: {Compounds.length}
+              <h5 className="card-title">{el.title}</h5>  
+                <p className="card-text">
+                Количество ингредиентов: {el.Compounds.length}
                 </p> 
-              </div>
+              <button id={el.id} type="button" className="btn btn-outline-info btnBucket">В избранное</button>
             </div>
           </div>
          </div>
