@@ -16,7 +16,11 @@ const app = express();
 const homeRouter = require('./routes/homeRoute');
 const registerRouter = require('./routes/registerRoute');
 const loginRouter = require('./routes/loginRoute');
+
 const receptInfo = require('./routes/receptInfoRoute')
+const favoritesRouter = require('./routes/favoritesRouter');
+const favoriteAdd = require('./routes/favoriteAdd')
+
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public/')));
@@ -40,7 +44,11 @@ app.use(session(sessionConfig));
 app.use('/', homeRouter);
 app.use('/registration', registerRouter);
 app.use('/login', loginRouter);
+
 app.use('/', receptInfo)
+app.use('/favorites', favoritesRouter);
+app.use('/favoriteAdd', favoriteAdd);
+
 
 
 app.get('/logout', (req, res) => {
