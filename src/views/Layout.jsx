@@ -37,9 +37,6 @@ module.exports = function Layout({ children, newUser, receptHome }) {
                       </div>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/cards">Cards</a>
-                    </li>
-                    <li className="nav-item">
                       <a className="nav-link" href="/favorites">Избранное</a>
                     </li>
                     <li className="nav-item">
