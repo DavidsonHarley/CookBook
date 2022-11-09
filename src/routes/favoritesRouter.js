@@ -4,9 +4,8 @@ const Favorites = require('../views/Favorites');
 const { Recept, Favorite, User } = require('../../db/models');
 
 router.get('/', async (req,res) => {
-  const { newUser, newUserID } = req.session;
-  const newRecept = await Favorite.findAll({ include:Recept })
-  console.log('132123123', newRecept);
+  const { newUser, newUserID  } = req.session;
+  const newRecept = await Favorite.findAll({ include:Recept, where: {userID: newUserID} });
   renderTemplate(Favorites, { newUser, newUserID,newRecept:newRecept.map((el) => el.get({plain:true})) } || null, res);
 })
 
