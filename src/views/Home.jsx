@@ -13,10 +13,10 @@ module.exports = function Home({ newUser, receptHome}) {
         <div className='mainImg'>
           <img className='img' src="img/1539535829172342793.jpg" alt="edaMain" />
         </div>
-
+          
         <div className='containerCards'>
 
-        {receptHome &&  receptHome.map((el) => 
+        {receptHome &&  receptHome.sort((a, b) => b.time - a.time).map((el) => 
           <>
           <div key={el.id} className='containerRecept'>
             <div className="card" style={{width: '18rem'}}>

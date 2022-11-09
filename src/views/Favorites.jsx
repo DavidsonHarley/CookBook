@@ -1,10 +1,11 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Favorites({ newUser,newRecept}) {
-  console.log('123123', newRecept);
+module.exports = function Favorites({ newUser,newRecept, newUserID}) {
+ console.log(newRecept.map((el)=> el.userID));
   return (
     <Layout newUser={newUser}>
+
      <div className='containerCards'>
 
 {newRecept &&  newRecept.map((el) => 
