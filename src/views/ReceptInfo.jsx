@@ -2,8 +2,8 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function ReceptInfo({ receptInfo, ingredients  }) {
-	console.log('ИНГРЕДИЕНТЫ====>',ingredients )
-	console.log('РЕЦЕПТ====>',receptInfo)
+	// console.log('ИНГРЕДИЕНТЫ====>',ingredients )
+	// console.log('РЕЦЕПТ====>',receptInfo)
     return(
 			<Layout>
 				<img src={receptInfo.img} className="cardRecept" alt="imgRecept"/>

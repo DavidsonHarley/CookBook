@@ -19,17 +19,17 @@ module.exports = function Home({ newUser, receptHome}) {
         {receptHome &&  receptHome.map((el) => 
           <>
           <div key={el.id} className='containerRecept'>
-         <div className="card" style={{width: '18rem'}}>
-            <img src={el.img} className="card-img-top" alt="img"/>
-            <div className="card-body">
+            <div className="card" style={{width: '18rem'}}>
+              <img src={el.img} className="card-img-top" alt="img"/>
+              <div className="card-body">
               <a href={`/recept/${el.id}`}><h5 className="card-title">{el.title}</h5></a> 
-                <p className="card-text">
+              <p className="card-text">
                 Количество ингредиентов: {el.Compounds.length}
-                </p> 
+              </p> 
               <button id={el.id} type="button" className="btn btn-outline-info btnBucket">В избранное</button>
+              </div>
             </div>
           </div>
-         </div>
           </>
         )}
         </div>

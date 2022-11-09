@@ -45,7 +45,7 @@ app.use('/', homeRouter);
 app.use('/registration', registerRouter);
 app.use('/login', loginRouter);
 
-app.use('/', receptInfo)
+app.use('/recept', receptInfo)
 app.use('/favorites', favoritesRouter);
 app.use('/favoriteAdd', favoriteAdd);
 

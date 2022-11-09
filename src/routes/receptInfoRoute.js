@@ -3,7 +3,7 @@ const renderTemplate = require('../lib/renderTemplate');
 const ReceptInfo = require('../views/ReceptInfo')
 const {Recept, User, Compound, Ingredient } =require('../../db/models')
 
-router.get('/recept/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
       const { id } = req.params;
       const receptInfo = await Recept.findOne({ where: { id }, raw: true});
