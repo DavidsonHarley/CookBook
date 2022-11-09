@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({Compound}) {
       // define association here
-      this.belongsTo(Compound, {foreignKey: 'ingredientID'} );
+      this.hasMany(Compound, {foreignKey: 'ingredientID'} );
     }
 
   }

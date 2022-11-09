@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ children, newUser }) {
+module.exports = function Layout({ children, newUser, receptHome }) {
   return (
     <html lang="en">
       <head>
@@ -57,6 +57,7 @@ module.exports = function Layout({ children, newUser }) {
             </div>
           </nav>
         </header>
+       
         { children }
       </body>
     </html>

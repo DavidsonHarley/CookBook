@@ -11,13 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({Compound, Favorite}) {
       // define association here
-      this.hasOne(Compound, {foreignKey: 'receptID'});
+      this.hasMany(Compound, {foreignKey: 'receptID'});
       this.hasMany(Favorite, {foreignKey: 'receptID'});
     }
   }
   Recept.init({
     title: DataTypes.STRING,
-    time: DataTypes.INTEGER,
+    time: DataTypes.STRING,
     instruction: DataTypes.TEXT,
     img: DataTypes.STRING
   }, {
