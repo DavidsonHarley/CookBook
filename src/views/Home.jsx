@@ -2,7 +2,7 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function Home({ newUser, receptHome}) {
-  console.log(receptHome);
+  // console.log(receptHome);
   return (
     <Layout newUser={newUser}>
       <link rel="stylesheet" href="styles/main.css" />
