@@ -27,6 +27,14 @@ margin-bottom: 10px;
 
 .containerRecept{
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
   margin-top: 40px;
+  margin-right: 20px;
+}
+
+.app{
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
 }
