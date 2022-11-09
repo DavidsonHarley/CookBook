@@ -9,18 +9,20 @@ module.exports = function Home({ newUser, receptHome}) {
       {' '}
       { newUser }
       <div >
+        <div className='mainImg'>
+          <img className='img' src="img/1539535829172342793.jpg" alt="edaMain" />
+        </div>
         {receptHome &&  receptHome.map(({title, img, instruction}) => 
           <>
-          <div></div>
-          <div>
-            <h1>{title}</h1>
+          <div className='containerRecept'>
+         <div className="card" style={{width: '18rem'}}>
+            <img src={img} class="card-img-top" alt="img"/>
+            <div className="card-body">
+              <h5 className="card-title">{title}</h5>  
+              <a href="#" className="btn btn-primary">Go somewhere</a>
             </div>
-            <div >
-              <img className='img' src={img} alt="img" />
-            </div>
-            <div>
-              {instruction}
-            </div>
+          </div>
+          </div>
           </>
         )}
       </div>
