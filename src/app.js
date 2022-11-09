@@ -16,6 +16,7 @@ const app = express();
 const homeRouter = require('./routes/homeRoute');
 const registerRouter = require('./routes/registerRoute');
 const loginRouter = require('./routes/loginRoute');
+const receptInfo = require('./routes/receptInfoRoute')
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public/')));
@@ -39,6 +40,8 @@ app.use(session(sessionConfig));
 app.use('/', homeRouter);
 app.use('/registration', registerRouter);
 app.use('/login', loginRouter);
+app.use('/', receptInfo)
+
 
 app.get('/logout', (req, res) => {
   if (req.session.newUser) {
