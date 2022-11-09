@@ -67,11 +67,7 @@ const path = require('path');
 require('dotenv').config()
 
 module.exports = {
-  'config': path.resolve('db', 'config.json'),
-  'models-path': path.resolve('db', 'models'),
-  'seeders-path': path.resolve('db', 'seeders'),
-  'migrations-path': path.resolve('db', 'migrations')
-};
+  vladisval@vladisval-AB350M-DS3H-V2:~/CookBook$ npx sequelize db:migrate:udo
 
 // ! 6.2 в конфиг прописываем 
 /*
