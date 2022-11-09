@@ -13,15 +13,16 @@ module.exports = function Home({ newUser, receptHome}) {
         <div className='mainImg'>
           <img className='img' src="img/1539535829172342793.jpg" alt="edaMain" />
         </div>
+
         <div className='containerCards'>
 
         {receptHome &&  receptHome.map((el) => 
           <>
-          <div className='containerRecept'>
+          <div key={el.id} className='containerRecept'>
          <div className="card" style={{width: '18rem'}}>
             <img src={el.img} className="card-img-top" alt="img"/>
             <div className="card-body">
-              <h5 className="card-title">{el.title}</h5>  
+              <a href={`/recept/${el.id}`}><h5 className="card-title">{el.title}</h5></a> 
                 <p className="card-text">
                 Количество ингредиентов: {el.Compounds.length}
                 </p> 
