@@ -17,22 +17,9 @@ router.post('/receptCreate', async (req,res) => {
         const newName = name.split(',');
         const newNAmeFor =  newName.map(async(el)  => {
             const newIngredient =  await Ingredient.create({name: el});
-        //     const newIngredient =  await Ingredient.findOrCreate({
-        //         where: { name: el}, 
-        //         defaults: {
-        //             name: el
-        //     }
-        // }
-        //         );
             const newCompound = await Compound.create({receptID: newRecept.dataValues.id, ingredientID: newIngredient.dataValues.id })
         })
-        console.log(newNAmeFor);
-
-        
-        // const newIngredient = await Ingredient.findOrCreate({name});
-        // const newCompound = await Compound.create({receptID: newRecept.dataValues.id, ingredientID: newNAmeFor.dataValues.id })
-        res.redirect('/favorites')
-
+        res.redirect('/')
     } catch (error) {
         console.log(error);
     }

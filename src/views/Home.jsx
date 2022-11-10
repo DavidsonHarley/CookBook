@@ -2,7 +2,6 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function Home({ newUser, receptHome}) {
-  // console.log(receptHome);
   return (
     <Layout newUser={newUser}>
       <link rel="stylesheet" href="styles/main.css" />
@@ -15,7 +14,6 @@ module.exports = function Home({ newUser, receptHome}) {
         </div>
           
         <div className='containerCards'>
-
         {receptHome &&  receptHome.sort((a, b) => b.Compounds.length - a.Compounds.length).map((el) => 
           <>
           <div key={el.id} className='containerRecept'>
@@ -26,17 +24,15 @@ module.exports = function Home({ newUser, receptHome}) {
               <p className="card-text">
                 Количество ингредиентов: {el.Compounds.length}
               </p> 
-              <button id={el.id} type="button" className="btn btn-outline-info btnBucket">В избранное</button>
+              <p>Время приготовления: {el.time} мин.</p>
+              {newUser ? (<button id={el.id} type="button" className="btn btn-outline-info btnBucket">В избранное</button>) : (null)}
+              
               </div>
             </div>
           </div>
           </>
         )}
         </div>
-
-
-        
-      
     </Layout>
   );
 };

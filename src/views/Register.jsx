@@ -12,6 +12,10 @@ module.exports = function Registr() {
             <input name="login" type="text" className="form-control" id="exampleInputLogin1" aria-describedby="loginHelp" />
           </div>
           <div className="mb-3">
+            <label htmlFor="exampleInputLogin1" className="form-label">E-mail</label>
+            <input name="email" type="email" className="form-control" id="exampleInputLogin1" aria-describedby="loginHelp" />
+          </div>
+          <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
             <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
           </div>
