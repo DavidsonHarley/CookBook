@@ -33,6 +33,9 @@ module.exports = function Home({ newUser, receptHome}) {
           </>
         )}
         </div>
+
+
+        
       
     </Layout>
   );

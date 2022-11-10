@@ -19,7 +19,9 @@ const loginRouter = require('./routes/loginRoute');
 
 const receptInfo = require('./routes/receptInfoRoute')
 const favoritesRouter = require('./routes/favoritesRouter');
-const favoriteAdd = require('./routes/favoriteAdd')
+const favoriteAdd = require('./routes/favoriteAdd');
+const receptCreate = require('./routes/receptCreateRouter');
+
 
 
 app.use(morgan('dev'));
@@ -48,6 +50,7 @@ app.use('/login', loginRouter);
 app.use('/recept', receptInfo)
 app.use('/favorites', favoritesRouter);
 app.use('/favoriteAdd', favoriteAdd);
+app.use('/', receptCreate);
 
 
 
