@@ -20,7 +20,7 @@ module.exports = function Layout({ children, newUser, receptHome }) {
         <header>
           <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
-              <a className="navbar-brand">Cook Book</a>
+              <a href='/' className="navbar-brand">Cook Book</a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
               </button>
@@ -38,6 +38,9 @@ module.exports = function Layout({ children, newUser, receptHome }) {
                     </li>
                     <li className="nav-item">
                       <a className="nav-link" href="/favorites">Избранное</a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="/receptCreate">Добавить рецепт</a>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link" href="/logout">Выйти!</a>
