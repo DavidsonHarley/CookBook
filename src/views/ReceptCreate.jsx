@@ -24,7 +24,7 @@ module.exports = function ReceptCreate({newUser}) {
             </div>
             <div className="mb-3">
             <label for="exampleFormControlTextarea1" className="form-label">Название Ингредиетов</label>
-            <textarea type='text' name='name' className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea type='text' name='name' className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ингредиент перечисляите через запятую"></textarea>
             </div>
            
             <button type="submit" className="btn btn-primary">Создать</button>
