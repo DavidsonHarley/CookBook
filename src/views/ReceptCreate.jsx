@@ -23,8 +23,8 @@ module.exports = function ReceptCreate({newUser}) {
             <input type="text" name='img' className="form-control" id="exampleFormControlInput1" placeholder="Ссылка на картинку"/>
             </div>
             <div className="mb-3">
-            <label htmlFor="exampleFormControlInput1" className="form-label">Название Ингредиетов</label>
-            <input type="text" name='name' className="form-control" id="exampleFormControlInput1" placeholder="Название Ингредиетов"/>
+            <label for="exampleFormControlTextarea1" className="form-label">Название Ингредиетов</label>
+            <textarea type='text' name='name' className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ингредиент перечисляите через запятую"></textarea>
             </div>
             <button type="submit" className="btn btn-primary">Создать</button>
              
