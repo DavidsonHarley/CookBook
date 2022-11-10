@@ -5,6 +5,7 @@ module.exports = function Home({ newUser, receptHome, newUserID}) {
   return (
     <Layout newUser={newUser}>
       <link rel="stylesheet" href="styles/main.css" />
+     
       Hello user!
       {' '}
       { newUser }
@@ -26,7 +27,7 @@ module.exports = function Home({ newUser, receptHome, newUserID}) {
               </p> 
               <p>Время приготовления: {el.time} мин.</p>
               {newUser ? (<button id={el.id} type="button" className="btn btn-outline-info btnBucket">В избранное</button>) : (null)}
-                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn btn-danger">Удалить</button>) : null}     
+                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn">Удалить</button>) : null}     
               </div>
             </div>
           </div>

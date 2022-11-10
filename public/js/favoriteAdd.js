@@ -1,5 +1,10 @@
+
 const cardContainer = document.querySelector('.containerCards');
 const postsContainer = document.querySelector('.postsContainer');
+const containerRecept = document.querySelector('.containerRecept')
+const card = document.querySelector('.card')
+
+
 
 
 cardContainer?.addEventListener('click', async (e) => {
@@ -11,8 +16,21 @@ cardContainer?.addEventListener('click', async (e) => {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ receptID })
       })
-     const result = await response.json()
-    //  console.log(result);
+      const results = await response.json()
+    }
+      if (e.target.tagName ==='BUTTON' && e.target.innerHTML === 'Удалить'){
+      const { id } = e.target;
+      const cardContainer = e.target.parentElement.parentElement.parentElement
+      const response = await fetch('/', {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ id })
+      })
+      
+      if (response.status === 200) {
+        // card.removeChild(e.target.parentNode);
+        cardContainer.remove()
+      }
     }
   } catch (error) {
     console.log('Error', error);
@@ -20,10 +38,6 @@ cardContainer?.addEventListener('click', async (e) => {
 })
 
 postsContainer.addEventListener('click', async (e) => {
-  // if (e.target.tagName === 'BUTTON' && e.target.innerHTML === 'Удалить') {
-  //       const { id } = e.target;
-  //       console.log(e.target.id);
-  // }
   try {
     if (e.target.tagName === 'BUTTON' && e.target.innerHTML === 'Удалить') {
       const { id } = e.target;
@@ -41,3 +55,5 @@ postsContainer.addEventListener('click', async (e) => {
     console.log('error ', error);
   }
 });
+
+
