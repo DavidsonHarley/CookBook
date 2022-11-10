@@ -16,7 +16,7 @@ module.exports = function Home({ newUser, receptHome}) {
           
         <div className='containerCards'>
 
-        {receptHome &&  receptHome.sort((a, b) => b.time - a.time).map((el) => 
+        {receptHome &&  receptHome.sort((a, b) => b.Compounds.length - a.Compounds.length).map((el) => 
           <>
           <div key={el.id} className='containerRecept'>
             <div className="card" style={{width: '18rem'}}>
