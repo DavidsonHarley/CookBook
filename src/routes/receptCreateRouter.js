@@ -13,7 +13,8 @@ router.get('/receptCreate', (req,res) => {
 router.post('/receptCreate', async (req,res) => {
     try {
         const {title, time, instruction, img, name} = req.body;
-        const newRecept = await Recept.create({title, time, instruction, img});
+        const { newUserID } = req.session;
+        const newRecept = await Recept.create({title, time, instruction, img, userID: newUserID});
         const newName = name.split(',');
         const newNAmeFor =  newName.map(async(el)  => {
             const newIngredient =  await Ingredient.create({name: el});

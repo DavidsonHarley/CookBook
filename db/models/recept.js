@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     time: DataTypes.INTEGER,
     instruction: DataTypes.TEXT,
-    img: DataTypes.STRING
+    img: DataTypes.STRING,
+    userID: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Recept',

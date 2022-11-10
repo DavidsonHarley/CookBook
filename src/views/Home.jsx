@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Home({ newUser, receptHome}) {
+module.exports = function Home({ newUser, receptHome, newUserID}) {
   return (
     <Layout newUser={newUser}>
       <link rel="stylesheet" href="styles/main.css" />
@@ -26,7 +26,7 @@ module.exports = function Home({ newUser, receptHome}) {
               </p> 
               <p>Время приготовления: {el.time} мин.</p>
               {newUser ? (<button id={el.id} type="button" className="btn btn-outline-info btnBucket">В избранное</button>) : (null)}
-              
+                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn btn-danger">Удалить</button>) : null}     
               </div>
             </div>
           </div>
