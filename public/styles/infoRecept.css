@@ -9,11 +9,13 @@
 }
 
 .cardRecept{
+    margin: auto;
   width: 870px;
   height: 480px;
 }
 .info{
  display: flex;
+ margin: auto;
  
 }
 
@@ -22,21 +24,26 @@
     font-size: 36px;
     margin-top: 30px;
     text-align: center;
+    margin: auto;
     
 }
 
 .containerIngredient{
     margin-top: 30px;
     margin-left: 40px;
+    
 }
 
 .timeInfo{
     margin-top: 30px;
     margin-left: 160px;
+    
 }
 
 .instructionRecept{
+    max-width: 960px;
+    margin-left: 40px;
     margin-top: 30px;
     margin-bottom: 50px;
-    
+   
 }
