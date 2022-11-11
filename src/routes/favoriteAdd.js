@@ -7,7 +7,14 @@ router.post('/', async (req, res) => {
   const { newUserID } = req.session;
   // console.log("idddd", receptID);
   try {
-    await Favorite.create({userID: newUserID, receptID: receptID });
+    // await Favorite.create({userID: newUserID, receptID: receptID });
+
+    await Favorite.findOrCreate({
+      where: {userID: newUserID, receptID: receptID },
+      defaults: { }
+    });
+
+
     res.json({ create: 'OK!' });
   } catch (error) {
     console.log('Ошибка добавления карты в базу!', error);
