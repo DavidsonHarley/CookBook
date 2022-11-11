@@ -18,7 +18,7 @@ cardContainer?.addEventListener('click', async (e) => {
     }
       if (e.target.tagName ==='BUTTON' && e.target.classList.contains('btnDelete')){
       const { id } = e.target;
-      const cardContainer = e.target.parentElement.parentElement.parentElement
+      const cardContainer = e.target.parentElement.parentElement.parentElement.parentElement
       const response = await fetch('/', {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'},
