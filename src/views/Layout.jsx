@@ -12,9 +12,13 @@ module.exports = function Layout({ children, newUser, receptHome }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet"></link>
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Pacifico&display=swap" rel="stylesheet"></link>
         <link rel="stylesheet" href="styles/main.css" />
         <link rel="stylesheet" href="/styles/infoRecept.css" />
         <link rel="stylesheet" href="/styles/favorites.css" />
+        <link rel="stylesheet" href="/styles/receptCreate.css" />
         <title>Cook Book</title>
         <script defer src="js/favoriteAdd.js"/>
       </head>
@@ -22,10 +26,16 @@ module.exports = function Layout({ children, newUser, receptHome }) {
                
                             <nav className="navbar bg-light fixed-top">
                       <div className="container-fluid">
-                        <a className="navbar-brand" href="/">Кулинарная Книга</a>
+                        <div className='logoNav'>
+                        <a className="navbar-brand" href="/">
+                         <img className='imgLogo' src="img/photo_2022-11-11_11-46-32.jpg" alt="imgLogo" />  Кулинарная Книга
+                          </a>
+                        </div>
+                        <div className='buttonNav'>
                         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                           <span className="navbar-toggler-icon"></span>
                         </button>
+                        </div>
                         <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                           <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
@@ -75,6 +85,8 @@ module.exports = function Layout({ children, newUser, receptHome }) {
 
        
         { children }
+
+
       </body>
     </html>
   );
