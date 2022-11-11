@@ -4,9 +4,6 @@ const postsContainer = document.querySelector('.postsContainer');
 const containerRecept = document.querySelector('.containerRecept')
 const card = document.querySelector('.card')
 
-
-
-
 cardContainer?.addEventListener('click', async (e) => {
   try {
     if(e.target.tagName === 'BUTTON' && e.target.innerHTML === 'В избранное') {
