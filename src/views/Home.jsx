@@ -12,7 +12,9 @@ module.exports = function Home({ newUser, receptHome, newUserID}) {
         <div className='mainImg'>
           <img className='img' src="img/1539535829172342793.jpg" alt="edaMain" />
         </div>
-          
+          <div className='textTitlenadImg'>
+             Выбери Лучший Рецепт
+          </div>
         <div className='containerCards'>
         {receptHome &&  receptHome.sort((a, b) => b.Compounds.length - a.Compounds.length).map((el) => 
           <>
@@ -20,13 +22,18 @@ module.exports = function Home({ newUser, receptHome, newUserID}) {
             <div className="card" style={{width: '18rem'}}>
               <img src={el.img} className="imgRecept" alt="img"/>
               <div className="cardTitleTextt">
-              <a className='aTitle' href={`/recept/${el.id}`}><h5 className="card-title">{el.title}</h5></a> 
-              <p className="">
-                Количество ингредиентов: {el.Compounds.length}
-              </p> 
-              <p>Время приготовления: {el.time} мин.</p>
+              <a className='aTitle' href={`/recept/${el.id}`}>
+                <h5 className="cardTitle">{el.title}</h5>
+                </a> 
               {newUser ? (<button id={el.id} type="button" className="btn">В избранное</button>) : (null)}
-                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn">Удалить</button>) : null}     
+                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn">Удалить</button>) : null}
+                <div className='elTime'>
+                  <p className="sizeTime">
+                  🥗- {el.Compounds.length} ел.
+                  </p> 
+                  <p className='sizeTime'>⌚- {el.time} мин.</p>    
+                </div>
+                
               </div>
             </div>
           </div>
