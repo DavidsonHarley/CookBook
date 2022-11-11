@@ -28,11 +28,9 @@ module.exports = function Layout({ children, newUser, receptHome }) {
                         </button>
                         <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                           <div className="offcanvas-header">
-                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                           Привет 
+                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel"> 
                           {' '}
                           { newUser }
-                            !
                           </h5>
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                           </div>
@@ -48,7 +46,7 @@ module.exports = function Layout({ children, newUser, receptHome }) {
                                 <a className="nav-link" href="/receptCreate">Добавить рецепт</a>
                               </li>
                               <li className="nav-item">
-                                <a className="nav-link" href="/logout">Выйти!</a>
+                                <a className="nav-link" href="/logout">Выйти</a>
                               </li>
                             </ul>
                             </div>
