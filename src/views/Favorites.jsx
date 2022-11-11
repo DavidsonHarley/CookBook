@@ -6,13 +6,20 @@ module.exports = function Favorites({ newUser,newRecept, newUserID}) {
   return (
     <Layout newUser={newUser}>
       
-
+      <div className='favoritesTitle'>
+        <h1>ЛЮБИМЫЕ РЕЦЕПТЫ</h1>
+      </div>
   <div className='postsContainer'>
 {newRecept &&  newRecept.map((el) => 
   <div key={el.Recept.id} className='card' style={{width: '18rem'}} >
     <img src={el.Recept.img} className="card-img-top" alt="img"/>
-      <a href={`/recept/${el.Recept.id}`}><h5 className="card-title">{el.Recept.title}</h5></a> 
-      <button id={el.id} type="button" className="btn btn-danger">Удалить</button>
+      <a className='aTitle' href={`/recept/${el.Recept.id}`}>
+        <h5 className="cardTitleText">{el.Recept.title}</h5>
+        </a> 
+        <div className='buttonDelete'>
+        <button id={el.id} type="button" className="btn btn-danger">Удалить</button>
+        </div>
+      
   </div>
 )}
 </div>

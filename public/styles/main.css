@@ -1,8 +1,18 @@
-.mainDiv {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px;
+
+
+
+.navTitle{
+  display: inline-flex;
+  align-items: center;
+  margin-left: 800px;
 }
+.fluid{
+  justify-content: space-evenly
+}
+.imgRecept{
+  border-radius: 10px 10px 0 0;
+}
+ 
 
 .container{
   max-width: 600px;
@@ -26,17 +36,17 @@ margin-bottom: 10px;
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  max-height: 1200px;
   
 }
-
 .containerCards{
   display: flex;
-  
-  margin: 40px;
-}
-.containerRecept{
-  display: flex;
-  margin: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  max-width: 1000px;
+  margin-top: 50px;
 }
 
 .app{
@@ -45,12 +55,7 @@ margin-bottom: 10px;
   text-decoration: none;
 }
 
-.postsContainer{
-  width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
+
 
 .card{
   margin:10px;
@@ -58,4 +63,15 @@ margin-bottom: 10px;
   height: 350px;
   border: 1px solid black;
   border-radius: 15px;
+}
+
+.Titellogo{
+  display: flex;
+  justify-content: center;
+  font-family: 'Annie Use Your Telescope', cursive;
+  margin-top: 100px;
+}
+.cardTitleText{
+  margin-top: 5px;
+ text-align: center;
 }
