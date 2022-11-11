@@ -15,7 +15,7 @@ module.exports = function Layout({ children, newUser, receptHome }) {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Pacifico&display=swap" rel="stylesheet"></link>
-        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="/styles/main.css" />
         <link rel="stylesheet" href="/styles/infoRecept.css" />
         <link rel="stylesheet" href="/styles/favorites.css" />
         <link rel="stylesheet" href="/styles/receptCreate.css" />
@@ -24,11 +24,11 @@ module.exports = function Layout({ children, newUser, receptHome }) {
       </head>
       <body>
                
-                            <nav className="navbar bg-light fixed-top">
+                            <nav className="navbar bg-light fixed-top navBack" >
                       <div className="container-fluid">
                         <div className='logoNav'>
                         <a className="navbar-brand" href="/">
-                         <img className='imgLogo' src="img/photo_2022-11-11_11-46-32.jpg" alt="imgLogo" />  Кулинарная Книга
+                         <img className='imgLogo' src="/img/photo_2022-11-11_11-46-32.jpg" alt="imgLogo" />  Кулинарная Книга
                           </a>
                         </div>
                         <div className='buttonNav'>
