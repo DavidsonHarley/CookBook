@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+input{
+  height: 50px;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 16px;
+  border: 2px solid #E9F2FF;
+  border-radius: 5px;
+  padding-left: 25px;
+  background: rgba( 0,0,0,.6);
+}
+.form-title{
+  /* color: #30507D; */
+  color: #fdfdfd;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 23px;
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: center;
+}
+.register-form-container{
+  position: relative;
+  z-index: 2;
+  max-width: 415px;
+  width: 100%;
+  /* background-image: url(http://fotorelax.ru/wp-content/uploads/2016/01/Beautiful-pictures-of-food-03.jpg); */
+  background-size: 700px;
+  box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  animation-name: fadeForm;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeForm{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.form-field{
+  margin-bottom: 13px;
+
+  
+}
+.button{
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  height: 45px;
+  /* background: #247FFF; */
+  background: rgba( 0,0,0,.6);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  width: 150px;
+}
+.button:hover{
+  background-color: #0D6CF2;
+}
+a.button{
+  text-decoration: none;
+}
+.regForm{
+  /* background: #f1f5fe; */
+  background-image: url(http://fotorelax.ru/wp-content/uploads/2016/01/Beautiful-pictures-of-food-03.jpg);
+  background-size: 1920px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input:focus{
+  outline: none;
+  border: 2px solid #c1d8fd;
+
+}
+.form-buttons{
+  display: flex;
+  justify-content: center;
+}
+.aDiv{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #e8edf5;
+}
+
+.aDiv:hover{
+  text-decoration: none;
+}

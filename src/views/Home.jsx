@@ -1,39 +1,46 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Home({ newUser, receptHome}) {
-  // console.log(receptHome);
+module.exports = function Home({ newUser, receptHome, newUserID}) {
   return (
     <Layout newUser={newUser}>
-      <link rel="stylesheet" href="styles/main.css" />
-      Hello user!
-      {' '}
-      { newUser }
 
+          <div className='Titellogo'>
+            <h1 >Кулинарная Книга </h1> 
+          </div>
+      <div className='containerMain'>
         <div className='mainImg'>
           <img className='img' src="img/1539535829172342793.jpg" alt="edaMain" />
         </div>
-          
+          <div className='textTitlenadImg'>
+             Выбери Лучший Рецепт
+          </div>
         <div className='containerCards'>
-
-        {receptHome &&  receptHome.sort((a, b) => b.time - a.time).map((el) => 
+        {receptHome &&  receptHome.sort((a, b) => b.Compounds.length - a.Compounds.length).map((el) => 
           <>
           <div key={el.id} className='containerRecept'>
             <div className="card" style={{width: '18rem'}}>
-              <img src={el.img} className="card-img-top" alt="img"/>
-              <div className="card-body">
-              <a href={`/recept/${el.id}`}><h5 className="card-title">{el.title}</h5></a> 
-              <p className="card-text">
-                Количество ингредиентов: {el.Compounds.length}
-              </p> 
-              <button id={el.id} type="button" className="btn btn-outline-info btnBucket">В избранное</button>
+              <img src={el.img} className="imgRecept" alt="img"/>
+              <div className="cardTitleTextt">
+              <a className='aTitle' href={`/recept/${el.id}`}>
+                <h5 className="cardTitle">{el.title}</h5>
+                </a> 
+              {newUser ? (<button id={el.id} type="button" className="btn">В избранное</button>) : (null)}
+                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn">Удалить</button>) : null}
+                <div className='elTime'>
+                  <p className="sizeTime">
+                  🥗- {el.Compounds.length} ел.
+                  </p> 
+                  <p className='sizeTime'>⌚- {el.time} мин.</p>    
+                </div>
+                
               </div>
             </div>
           </div>
           </>
         )}
         </div>
-      
+        </div>
     </Layout>
   );
 };

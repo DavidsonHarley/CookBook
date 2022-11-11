@@ -9,6 +9,14 @@ router.get('/', async (req,res) => {
   renderTemplate(Favorites, { newUser, newUserID,newRecept:newRecept.map((el) => el.get({plain:true})) } || null, res);
 })
 
-
+router.delete('/', async (req, res) => {
+  try {
+    const { id } = req.body;
+    await Favorite.destroy({ where: { id } });
+    res.sendStatus(200);
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 module.exports = router;

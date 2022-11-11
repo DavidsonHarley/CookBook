@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
   // console.log(req.body);
-  const { login, password } = req.body;
+  const { login, email, password } = req.body;
   try {
     const user = await User.findOne({ where: { login } });
     if (user) {
@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
       return;
     }
     const hash = await bcrypt.hash(password, 10);
-    const newUser = await User.create({ login, password: hash });
+    const newUser = await User.create({ login, email, password: hash });
     req.session.newUser = newUser.login;
     req.session.newUserID = newUser.id;
     // console.log('=====>', req.session.newUserID);

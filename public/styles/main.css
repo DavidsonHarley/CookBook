@@ -1,13 +1,26 @@
-.mainDiv {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px;
+
+body{
+  font-family: 'Pacifico', cursive;
 }
+
+.navTitle{
+  display: inline-flex;
+  align-items: center;
+  margin-left: 800px;
+}
+.fluid{
+  justify-content: space-evenly
+}
+.imgRecept{
+  border-radius: 10px 10px 0 0;
+}
+ 
 
 .container{
   max-width: 600px;
   border: 2px solid black;
   margin-bottom: 10px;
+  margin-top: 200px;
 }
 
 .btn {
@@ -17,24 +30,89 @@ margin-bottom: 10px;
 
 .img{
   width: 1200px;
-  height: 800px;
+  height: 700px;
+  border-radius: 30px;
+  margin-right: 40px;
 }
 
 .mainImg{
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+  max-height: 1200px;
+  
 }
-
-.containerRecept{
+.containerCards{
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  margin-top: 40px;
-  margin-right: 20px;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  max-width: 1000px;
+  margin-top: 20px;
+  
 }
 
 .app{
   display: flex;
   flex-direction: row-reverse;
   text-decoration: none;
+}
+
+
+
+.card{
+  margin:10px;
+  width: 300px;
+  height: 350px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.Titellogo{
+  display: flex;
+  justify-content: center;
+
+  margin-top: 100px;
+}
+.cardTitleText{
+  margin-top: 5px;
+  text-align: center;
+}
+.logoNav{
+  display: flex;
+  margin-left: 35%;
+}
+
+.buttonNav{
+  display: flex;
+  margin-right: 36%;
+}
+
+.sizeTime{
+  font-size: 20px;
+}
+
+.elTime{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px 0 15px;
+
+}
+
+.cardTitle{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.textTitlenadImg{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.imgLogo{
+  width: 30px;
+  height: 30px;
+  align-items: center;
 }

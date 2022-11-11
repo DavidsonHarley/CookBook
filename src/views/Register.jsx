@@ -4,20 +4,30 @@ const Layout = require('./Layout');
 module.exports = function Registr() {
   return (
     <Layout>
-      <link rel="stylesheet" href="styles/main.css" />
-      <div className="container">
+      <link rel="stylesheet" href="styles/authLogin.css" />
+     
         <form className="regForm" action="/registration" method="POST">
-          <div className="mb-3">
-            <label htmlFor="exampleInputLogin1" className="form-label">Login</label>
-            <input name="login" type="text" className="form-control" id="exampleInputLogin1" aria-describedby="loginHelp" />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-            <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
-          </div>
-          <button type="submit" className="btn btn-primary">Registration</button>
-        </form>
+        <div className="register-form-container">
+      <h1 className="form-title">
+        Регистрация
+      </h1>
+      <div className="form-fields">
+        <div className="form-field">
+          <input name="login" type="text" placeholder="Имя" />
+        </div>
+        <div className="form-field">
+          <input name="email" type="email" placeholder="Почта" />
+        </div>
+        <div className="form-field">
+          <input name="password" type="password" placeholder="Пароль" />
+        </div>
       </div>
+      <div className="form-buttons">
+        <button className="button">Регистрация</button>
+      </div>
+        <a className="aDiv" href='/login'>Если уже зарегестрирован</a>
+    </div>
+        </form>
     </Layout>
   );
 };

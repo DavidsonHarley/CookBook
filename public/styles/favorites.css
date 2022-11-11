@@ -1,0 +1,25 @@
+.favoritesTitle{
+display: flex;
+justify-content: center;
+margin-top: 120px;
+}
+
+
+.postsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1000px;
+  }
+
+.aTitle{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.buttonDelete{
+    margin-top: 30px;
+    text-align: center;
+}
