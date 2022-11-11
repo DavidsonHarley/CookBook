@@ -16,7 +16,7 @@ cardContainer?.addEventListener('click', async (e) => {
       })
       const results = await response.json()
     }
-      if (e.target.tagName ==='BUTTON' && e.target.innerHTML === 'Удалить'){
+      if (e.target.tagName ==='BUTTON' && e.target.classList.contains('btnDelete')){
       const { id } = e.target;
       const cardContainer = e.target.parentElement.parentElement.parentElement
       const response = await fetch('/', {

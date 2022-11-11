@@ -116,3 +116,11 @@ margin-bottom: 10px;
   height: 30px;
   align-items: center;
 }
+
+
+.containerBtn {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px ;
+}
+
