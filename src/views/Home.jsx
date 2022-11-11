@@ -1,7 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Home({ newUser, receptHome, newUserID}) {
+module.exports = function Home({ newUser, receptHome, newUserID, receptFavorite}) {
+  console.log('receptFavorite', receptFavorite)
+  console.log('newUserID', newUserID)
   return (
     <Layout newUser={newUser}>
 
@@ -25,8 +27,22 @@ module.exports = function Home({ newUser, receptHome, newUserID}) {
                 Количество ингредиентов: {el.Compounds.length}
               </p> 
               <p>Время приготовления: {el.time} мин.</p>
-              {newUser ? (<button id={el.id} type="button" className="btn">В избранное</button>) : (null)}
-                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn">Удалить</button>) : null}     
+
+
+              {/* {newUser ? (receptFavorite.map( (el) => el.userID === newUserID ? ( (<button id={el.id} type="button" className="btn btn-secondary btnFavorite">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"></path>
+</svg>
+              </button>)) : ( null ))) : (null) } */}
+
+              {newUser ? (<button id={el.id} type="button" className="btn btn-secondary btnFavorite">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"></path>
+</svg>
+              </button>)  : (null)}
+
+
+                {newUserID === el.userID ? (<button id={el.id} type="button" className="btn">Удалить</button>) : null}    
               </div>
             </div>
           </div>

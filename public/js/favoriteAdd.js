@@ -5,11 +5,10 @@ const containerRecept = document.querySelector('.containerRecept')
 const card = document.querySelector('.card')
 
 
-
-
 cardContainer?.addEventListener('click', async (e) => {
   try {
-    if(e.target.tagName === 'BUTTON' && e.target.innerHTML === 'В избранное') {
+    // if(e.target.tagName === 'BUTTON' && e.target.innerHTML === 'В избранное') {
+      if(e.target.tagName === 'BUTTON' && e.target.classList.contains('btnFavorite')) {
       const { id:receptID } = e.target
       const response = await fetch('/favoriteAdd', {
         method: 'POST',
@@ -28,7 +27,6 @@ cardContainer?.addEventListener('click', async (e) => {
       })
       
       if (response.status === 200) {
-        // card.removeChild(e.target.parentNode);
         cardContainer.remove()
       }
     }
@@ -42,13 +40,14 @@ postsContainer.addEventListener('click', async (e) => {
     if (e.target.tagName === 'BUTTON' && e.target.innerHTML === 'Удалить') {
       const { id } = e.target;
       console.log(e.target.id);
+      const cardFavorite = e.target.parentElement.parentElement
       const response = await fetch('/favorites', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id }),
       });
       if (response.status === 200) {
-        postsContainer.removeChild(e.target.parentNode);
+        cardFavorite.remove()
       }
     }
   } catch (error) {
