@@ -84,7 +84,9 @@ module.exports = function Layout({ children, newUser, receptHome }) {
        
         { children }
 
-
+<footer>
+  <div className='footer'></div>
+</footer>
       </body>
     </html>
   );

@@ -9,6 +9,7 @@ module.exports = function Home({ newUser, receptHome, newUserID, receptFavorite}
 
           <div className='Titellogo'>
             <h1 >Кулинарная Книга </h1> 
+            
           </div>
       <div className='containerMain'>
         <div className='mainImg'>
@@ -16,6 +17,9 @@ module.exports = function Home({ newUser, receptHome, newUserID, receptFavorite}
         </div>
           <div className='textTitlenadImg'>
              Выбери Лучший Рецепт
+             <div className='gifPovar'> 
+              <img src="/img/JPidB.gif" alt="gif" width={ '60px'}/>
+            </div>
           </div>
         <div className='containerCards'>
         {receptHome &&  receptHome.sort((a, b) => b.Compounds.length - a.Compounds.length).map((el) => 
